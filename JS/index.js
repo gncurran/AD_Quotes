@@ -75,19 +75,39 @@ var Author = [
   ];
   
 $(document).ready(function(){	
-	i=randomnumber();
-	$("#sayer").append(Quotes[i]);
-	$("#thinker").append(Author[i]);
+  var i=randomnumber();
+    $(".quote").append(Quotes[i]);
+    $(".author").append(Author[i]);
 	
-	$(".quotebutton").click(function(){
-		i=randomnumber();	
-		$("#sayer").empty();
-		$("#thinker").empty();
-		$("#sayer").append(Quotes[i]);
-		$("#thinker").append(Author[i]);
-	});
+  $(".quotebutton").click(function(){
+  var i=randomnumber();	
+    $(".quote").empty();
+    $(".author").empty();
+    $(".quote").append(Quotes[i]);
+    $(".author").append(Author[i]);
 });
+  
+  function randomnumber(){
+    return Math.round(Math.random()*4);
+  };
+  
+  var isContains = $('.author').text().indexOf('Lucille Bluth') > -1;
+  var isContains2 = $('.author').text().indexOf('Buster Bluth') > -1;
+  var isContains3 = $('.author').text().indexOf('Michael Bluth') > -1;
+  var isContains4 = $('.author').text().indexOf('Tobias Fünke') > -1;
 
-function randomnumber(){
-	return Math.round(Math.random()*35);
-}
+  
+  if (isContains == true) {
+    $('.bg1').css('background-image','url(http://i.imgur.com/5x5xsuU.png)');
+  } 
+  if (isContains2 == true) {
+    $('.bg1').css('background-image','url(http://i.imgur.com/1fOauS3.png)');
+  }
+  if (isContains3 == true) {
+    $('.bg1').css('background-image','url(http://i.imgur.com/pnXK2xh.png)');
+  }
+  if (isContains4 == true) {
+    $('.bg1').css('background-image','url(http://i.imgur.com/mOt03P8.png)');
+  }
+   
+ });
