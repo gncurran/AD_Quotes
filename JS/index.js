@@ -73,28 +73,32 @@ var Author = [
     "George Oscar Bluth (GOB)",
     "George Oscar Bluth (GOB)"
   ];
-  
+
 $(document).ready(function(){	
-  var i=randomnumber();
-    $(".quote").append(Quotes[i]);
-    $(".author").append(Author[i]);
+	var i=randomnumber();
+	$(".quote").append(Quotes[i]);
+	$(".author").append(Author[i]);
 	
-  $(".quotebutton").click(function(){
-  var i=randomnumber();	
-    $(".quote").empty();
-    $(".author").empty();
-    $(".quote").append(Quotes[i]);
-    $(".author").append(Author[i]);
-});
+	$(".quotebutton").click(function(){
+	var i=randomnumber();	
+
+		$(".quote").empty();
+		$(".author").empty();
+		$(".quote").append(Quotes[i]);
+		$(".author").append(Author[i]);
+
+	});
   
   function randomnumber(){
-    return Math.round(Math.random()*4);
+	return Math.round(Math.random()*35);
   };
-  
+});
+
+  /*
   var isContains = $('.author').text().indexOf('Lucille Bluth') > -1;
   var isContains2 = $('.author').text().indexOf('Buster Bluth') > -1;
   var isContains3 = $('.author').text().indexOf('Michael Bluth') > -1;
-  var isContains4 = $('.author').text().indexOf('Tobias Fünke') > -1;
+  var isContains4 = $('.author').text().indexOf('Tobias') > -1;
 
   
   if (isContains == true) {
@@ -111,3 +115,4 @@ $(document).ready(function(){
   }
    
  });
+ */
